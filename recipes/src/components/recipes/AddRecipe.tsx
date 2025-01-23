@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { UserContext } from "../user/userReducer";
 import { useNavigate } from 'react-router-dom';
-import { Dialog, DialogTitle, DialogContent, DialogActions, Button, TextField, Typography, Box } from '@mui/material';
+import { Dialog, DialogTitle, DialogContent, DialogActions, Button, TextField, Typography} from '@mui/material';
 import ErrorCom from './ErrorCom';
 
 const AddRecipe = () => {
@@ -40,7 +40,7 @@ const AddRecipe = () => {
             return;
         }
 
-        const recipeData = { id: user.firstName || user.email, title, products, description, authorId: user.firstName || user.email };
+        const recipeData = {title, products, description };
 
         try {
             const response = await fetch("http://localhost:3000/api/recipes/add", {
