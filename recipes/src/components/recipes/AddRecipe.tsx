@@ -112,6 +112,7 @@ const AddRecipe = () => {
                         onChange={(e) => setDescription(e.target.value)}
                         required
                     />
+                     
                     {error && <Typography color="error" style={{ textAlign: 'center' }}>{error}</Typography>}
                 </form>
             </DialogContent>

@@ -115,6 +115,7 @@ const Recipes: React.FC = () => {
             <Typography align="center"><strong>שם:</strong> {selectedRecipe.title}</Typography>
             <Typography align="center"><strong>מוצרים:</strong> {selectedRecipe.products}</Typography>
             <Typography align="center"><strong>תיאור:</strong> {selectedRecipe.description}</Typography>
+        <Typography align='center'><strong>נוצר על ידי: </strong>{selectedRecipe.authorId}</Typography>
           </RecipeDetailsContent>
         </RecipeDetailsContainer>
       )}

@@ -29,9 +29,9 @@ router.post('/add', authMiddleware, (req, res) => {
     const newRecipe = {
         id: Date.now(),
         title,
-        
-        description,products,
-        authorId: req.user.id,
+        products,
+        description,
+        authorId: req.user.firstName||req.user.email,
     };
 
     db.recipes.push(newRecipe);
